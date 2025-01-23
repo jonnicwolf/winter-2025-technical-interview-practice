@@ -31,6 +31,22 @@ function stringMatching(text, pattern) {
   // TODO: Implement the string matching algorithm
   // Return an array of indices where the pattern is found in the text
   // If the pattern is not found, return an empty array
-}
+  
+  if (typeof text !== 'string' ||
+      typeof pattern !== 'string'
+  ) throw new Error('Argument is not a string.')
+  if (text === '') return [];
+
+  const result = [];
+  for (let i=0; i<text.length;i++) {
+    let val = text[i];
+    if (val === pattern[0]) {
+      const test = [...pattern].every((c,idx) => c === text[i+idx]);
+      if (test) result.push(i);
+    };
+  };
+
+  return result;
+};
 
 module.exports = stringMatching;
