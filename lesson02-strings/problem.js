@@ -24,7 +24,11 @@ function lengthOfLongestSubstring(s) {
         if (i === s.length-1) results.push(count);
       }
   }
-  return results.sort((a,b) => b - a)[0];
-}
+  return Math.max(...results);
+};
+console.log(lengthOfLongestSubstring('abcabcbb'))
+console.log(lengthOfLongestSubstring('bbbbb'))
+console.log(lengthOfLongestSubstring('pwwkew'))
+
 
 module.exports = lengthOfLongestSubstring;
