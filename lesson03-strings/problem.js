@@ -33,8 +33,7 @@ function stringMatching(text, pattern) {
   // If the pattern is not found, return an empty array
   
   if (typeof text !== 'string' ||
-      typeof pattern !== 'string'
-  ) throw new Error('Argument is not a string.')
+      typeof pattern !== 'string') throw new Error('Argument is not a string.');
   if (text === '') return [];
 
   const result = [];
