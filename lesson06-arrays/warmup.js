@@ -8,7 +8,7 @@ function printTo10 () {
 // 2. Evens: create a function that prints out the even numbers 1-20
 function printEvenTo20 () {
   let i = 0;
-  do console.log(i+=2) 
+  do console.log(i+=2)
     while (i<20);
 };
 
