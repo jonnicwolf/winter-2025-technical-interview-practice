@@ -11,6 +11,18 @@ function isLeapYear(year) {
     year % 400 === 0
   ) return true
   return false
-}
+};
+// function isLeapYear(year) {
+//   // TODO: Implement the function
+//   return new Date(year, 1, 29).getDate() === 29;
+// };
 
+console.log(isLeapYear(2000)); // Expected output: true
+console.log(isLeapYear(1900)); // Expected output: false
+console.log(isLeapYear(2024)); // Expected output: true
+console.log(isLeapYear(2021)); // Expected output: false
+console.log(isLeapYear(1600)); // Expected output: true
+console.log(isLeapYear(1700)); // Expected output: false
+console.log(isLeapYear(1800)); // Expected output: false
+console.log(isLeapYear(2100)); // Expected output: false
 module.exports = isLeapYear;

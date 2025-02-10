@@ -20,11 +20,4 @@ const twoSum = (nums, target) => {
   };
 };
 
-
-// console.log(twoSum([1, -2, 2, 3, -3, 3, 3],2))
-const result = twoSum([1, -2, 2, 3, -3, 3, 3],2)
-console.log(result)
-console.log(twoSum([1, 2, 2, 3, 3, 3],3))
-console.log(twoSum([1, -2, 2, 3, -3, 3, 3],1))
-
 module.exports = twoSum;

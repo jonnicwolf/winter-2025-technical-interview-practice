@@ -1,15 +1,15 @@
 // Prompt 1: Find if an item is repeated in an array. Given an array of integers, find if an integer appears more than once in the array.
 const hasDuplicate = (nums) => new Set(nums).size === nums.length;
-console.log(hasDuplicate([1,7,3,4,9,8,8]) === false)
+
 // Prompt 2: Count occurrences of a letter from one string in another string. Given two strings, find the number of times a letter from the first string appears in the second string.
 const countLetterOccurrences = (str1, str2) => {
-  const letters = {}
+  const letters = {};
 
-  str1 = new Set(str1)
+  str1 = new Set(str1);
 
-  for (const char of str2) {
+  for (const char of str2) 
     if (str1.has(char)) letters[char] = (letters[char] || 0) + 1
-  }
+
   return Object.values(letters);
 };
 
