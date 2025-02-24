@@ -17,3 +17,8 @@ The teenager must be able to return home by 10, unless their gpa is 3.0 or highe
 
 Implement the PermissionChecker class with a method canGoOut(teenager, event) that returns true or false based on the above criteria.
 Include descriptive messages for each decision, explaining why permission was granted or denied. */
+
+class PermissionChecker {
+  
+}
+
