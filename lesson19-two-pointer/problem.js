@@ -21,7 +21,21 @@
  */
 
 function maxArea(heights) {
-  // Your code here
+  let maxArea = 0
+
+  let [left, right] = [0, heights.length-1];
+  do {
+    const left_val = heights[left];
+    const right_val = heights[right];
+    const width = right - left;
+    const height = Math.min(left_val, right_val);
+    
+    maxArea = Math.max(maxArea, width * height)
+    if (left_val < right_val) left++
+    else right--;
+  } while (left < right);
+
+  return maxArea;
 }
 
 module.exports = maxArea;
