@@ -5,27 +5,29 @@
 
 function prefixSum (arr) {
   const prefix = [0]; //pushing to arr is faster than updating int
-  for (let i=0; i<arr.length; i++){
-    prefix.push(prefix[i] + arr[i]) //cumulative sum of each index
-  }
+  for (let i=0; i<arr.length; i++) {
+    prefix.push(prefix[i] + arr[i]); // cumulative sum of each index
+  };
 
-  return prefix
+  return prefix;
 }
 
 function getWindowSum (prefix, l, r) {
-  return prefix[r+1] - prefix[l] // use prefix sums to do simple subtraction instead of running over the arr each time
-}
+  return prefix[r+1] - prefix[l]; // use prefix sums to do simple subtraction instead of running over the arr each time
+};
 
 function maxSubArraySum(arr, subArrLength) {
-  const prefix = prefixSum(arr)
+  if (arr.length < subArrLength) return null; // check that k doesn't overun arr length
+
+  const prefix = prefixSum(arr);
   let max = -Infinity; // cover negatives
 
   for (let i=0; i<=arr.length - subArrLength; i++) {
-    const windowSum = getWindowSum(prefix, i, i + subArrLength - 1) // add i to subArrLength and minus 1 to be inclusive
-    max = Math.max(max, windowSum)
-  }
+    const windowSum = getWindowSum(prefix, i, i + subArrLength - 1); // add i to subArrLength and minus 1 to be inclusive
+    max = Math.max(max, windowSum);
+  };
 
-  return max !== -Infinity ? max : null; // check that k doesn't overun arr length
+  return max;
 };
 
 console.log(maxSubArraySum([100,200,300,400], 2)) // 700
